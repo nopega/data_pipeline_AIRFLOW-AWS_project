@@ -1,0 +1,236 @@
+id,title,selftext,score,num_comments,author,created_utc,url,upvote_ratio,over_18,edited,spoiler,stickied
+1e6qny1,Can you be a data engineer without knowing advanced coding?,"tl;dr: Can you be a data enginner without coding skills and just use no or low-code tools like Alteryx to do the job?
+
+I've been in analytics and data visualization for well over 10 years. The tools I use every day are Alteryx and Tableau. I'm our department's Alteryx server admin as well as mentor. I help train newbies on Alteryx and Tableau as well. One of the things I enjoy the most about the job is the ETL piece from Alteryx. Just like any part of analytics the hardest part of it is data wrangling piece; which I enjoy quite a bit. BUT, I cannot code to save my life. I can do basic SQL. I had learned SQL right before I learned Alteryx many years ago, so I haven't had to learn advanced SQL becuse Alteryx can do it all in the GUI. I failed C++ twice in college(I'm 44) and have attempted to teach myself Python 3 times in the past 4 years and can't really understand it to do anything sufficient enough to be considered usable for a job. This helps explain why i use Alteryx and Tableau. The other viz tools like Qlik(blaaaahhhhh) and Looker are much more code-heavy.",73,78,csh8428,2024-07-19 00:30:36,https://www.reddit.com/r/dataengineering/comments/1e6qny1/can_you_be_a_data_engineer_without_knowing/,0,False,False,False,False
+1e6px9k,"Jack of all, master of none","Hello, Hope everyone is doing good.
+
+I’m currently working as a Data Engineer ( almost a senior data engineer now ) in a Big 4 consultancy firm for past 2 years. My tech stack is heavily revolved around Microsoft Azure ( Data Factory, Synapse warehouse, Fabric, Data Lakes, SQL databases, Log Analytics ), Databricks, dbt, Azure DevOps ( CICD and git ), and a little bit of PowerBI. 
+
+Over the years, I feel like that I am the jack of all trades aka when there is work I get it done, but I lack in depth understanding of the technology ( master of none ). For example, I know SQL but never used any window, pivot functions up till now so I am not really hands on with it. I’ll be able to build anything from scratch but debugging an error on an existing solution makes me go insane.
+
+I feel like my scope to data engineering tech stack is very limited as well.
+
+Any advices for me on how do I approach this problem and be the master of the underlying tech, and how do I develop more broad business acumen? Please feel free to drop in your suggestions and additional advices you have for me.
+
+Thank you :)",56,61,KeyboaRdWaRRioR1214,2024-07-18 23:54:49,https://www.reddit.com/r/dataengineering/comments/1e6px9k/jack_of_all_master_of_none/,0,False,False,False,False
+1e71c1f,How important is tech stack vs. total compensation to you in data engineering?,"I've worked in data engineering my whole career.  My current role is essentially ""software engineer - data"", but I have also worked in roles that were more adhoc SQL queries and building data pipelines.
+
+
+
+
+
+Let's say you are currently working in your tech stack of choice, what would it take you to switch to a higher paying role in data engineering that has a less interesting tech stack?",47,43,level_126_programmer,2024-07-19 11:22:23,https://www.reddit.com/r/dataengineering/comments/1e71c1f/how_important_is_tech_stack_vs_total_compensation/,0,False,False,False,False
+1e765oq,"Best way to move 10,000 JSON files from one S3 bucket to another?","Hi everyone,
+
+I'm currently tasked with transferring a large number of small JSON files between S3 buckets. The files are currently organized by year, month, day, and time (e.g., YYYYMMDDHHMMSS). I need to reorganize them so that they are stored only by year, month, and day (e.g., YYYYMMDD).
+
+I'm considering using AWS Glue for this task. Here are a few approaches I'm thinking about:
+
+1. **Direct Copy:** Simply copying the files from one location to another using s3.copyobject. Is this the most straightforward approach using Glue notebooks?
+2. **Using PySpark:** Leveraging PySpark in Glue to handle the file transfer. Would this be more efficient for handling a large number of files?
+3. **Merge/Compression Strategy:** Merging/Zipping the files daily before transferring, then unzipping them in the new bucket. Would this reduce costs or improve transfer efficiency?
+
+I'm looking for advice on the most effective way to approach this task using AWS Glue. Any insights on the best practices for such file manipulations or experiences with similar data engineering challenges would be greatly appreciated!",25,37,cryptoyash,2024-07-19 15:14:18,https://www.reddit.com/r/dataengineering/comments/1e765oq/best_way_to_move_10000_json_files_from_one_s3/,0,False,False,False,False
+1e6xy1q,How do you handle messy data from customers?,"There's a common issue across many organisations where user/customer entered data has to be cleaned, validated and processed into a warehouse. The target table in the warehouse is of course well defined, but the 'schema' of the source is a mess. The source files are often human readable - think ProductCode, product\_code. \[prod code\] as a tiny example, but is there something that can automatically map the columns as required. 
+
+To make things interesting the columns will move around, in that some customers will send the data with columns in different order. Is there a tool or achitecture that can handle that kind of vairable input? I wrote one a while back in C# and it worked pretty well, but I don't want to have to go down that route again. 
+
+BTW The data itself will come as csv, xlsx, txt, maybe even .accdb. 
+
+Any products to take away that pain?",12,28,MrTelly,2024-07-19 07:28:09,https://www.reddit.com/r/dataengineering/comments/1e6xy1q/how_do_you_handle_messy_data_from_customers/,0,False,False,False,False
+1e6wf4h,Incremental Data Load in ADF,"I recently started using ADF(Azure Data Factory) for creating pipelines. I am using Tumbling Window trigger to trigger my pipeline and using a custom logic in it using the start and end time of the window for Incremental Data Load( only processing the newly added files since the last pipeline run). Is it the optimal way to do Incremental Data Load in ADF and if not then is there any other way people do it in general?
+
+What techniques do u guys use for the same?",9,3,Effective-Tie-3149,2024-07-19 05:47:48,https://www.reddit.com/r/dataengineering/comments/1e6wf4h/incremental_data_load_in_adf/,0,False,False,False,False
+1e6t9sy,Turn offs and Turn ons in personal projects? ,"I just want to make something somewhat close to what a data engineer would be doing. I know the scale and complexity of a personal beginner project and an actual project are worlds apart, but I would like to NOT make noobie mistakes/practices that might make me look bad. 
+
+Here’s what I’m working on for more context: Pull top x trending videos info daily from Youtube API and store in postgres. Eventually want to transform and send the data to a dashboard.
+
+Using python for scripting, dbt for data transformation. Will use airflow to execute this every day. Everything is inside docker containers. Any suggestions?
+",7,5,HarvesterOfReveries,2024-07-19 02:44:35,https://www.reddit.com/r/dataengineering/comments/1e6t9sy/turn_offs_and_turn_ons_in_personal_projects/,0,False,False,False,False
+1e6pfo4,DBT or Homebrew custom CI/CD Solution,"Hi All, 
+
+I'm a data scientist/data analyst at a mid-sized corporation (< 10k employees). Our company uses snowflake as it's main repository for structured data. I work on a small analytics team, one of several at the company. 
+
+Currently, we have no way to develop code in a development environment and ship to a separate production environment. We only have a production database, and no CI/CD tool to speak off. 
+
+That worked fine until recently when I realized that I was developing and shipping code in the same environment, which was causing issues. I realized that we needed a CI/CD tool if we wanted to do things correctly and avoid shipping code with bugs in it. 
+
+So I went off and attempted to design a custom CI/CD solution for our team. I thought it would be relatively simple to wrangle something up using python scripts and Github actions, but the complexity quickly caught up to me, and I'm realizing I likely bit off more than I can chew. I'm not a data engineer, and CI/CD was a completely foreign concept to me up until about 3 weeks ago (as my work until recently only involved creating views on top of data, not modifying data tables themselves).
+
+I'm not sure what other teams do for their CI/CD processes, if they are doing anything. I've put out a question to them, and I'll see what they say. 
+
+I think the right solution is to use a tool like dbt, however dbt cloud is prohibitively expensive (at $100/user/month, with 8 users on our team, we're already over budget). 
+
+I was wondering if anyone had any suggestions for solutions? We're looking for a tool that can help us isolate a production and development environment, track changes to each environment, and version control, at the minimum. 
+
+  
+Thanks - 
+
+  
+",7,17,nazstat,2024-07-18 23:31:58,https://www.reddit.com/r/dataengineering/comments/1e6pfo4/dbt_or_homebrew_custom_cicd_solution/,0,False,False,False,False
+1e76e9o,Kimball modelling question,"Hey everyone, it's been a while since I did any kimball data modelling. Let's say I have two fact tables, one at daily granularity holding charges and payments against a customer. The other is a monthly balances holding the opening balance, total charges, total payments, and closing balance against the customer at month granularity. What's the best way to handle joining the different granularity fact tables on to a date dimension table? 
+
+(1) Hold a start of month date field or something like that to allow allow a join condition for the monthly fact data that will not duplicate the records for every day in the month?
+
+(2) Create two date dimension tables (one at daily granularity and one at monthly granularity). 
+
+I'm trying to consider the pros and cons of each approach. Or if I have missed something obvious please let me know. Thanks. ",6,10,Altruistic_Menu_8312,2024-07-19 15:24:36,https://www.reddit.com/r/dataengineering/comments/1e76e9o/kimball_modelling_question/,0,False,False,False,False
+1e72uc6,detailed real-world data modeling examples,"Hey all,
+
+I'm a data engineer with several years of experience. However, most of my experience has been in ETL pipeline development/maintenance, data cleaning and validation, testing, and database management/query tuning. I've held roles where data modeling decisions were already made and I had to learn to work with those decisions.
+
+  
+I'd like to learn more about data modeling. While I intend on reading up on the most commonly recommended books, I tend to learn most efficiently by following real world examples. 
+
+  
+I'm wondering if there are any resources you know of that have such examples? I'm not talking about a 'pseudo code' version of data modeling i.e. here are our dim tables and fact tables, here are some columns, and that's it. But more about which structure was selected, why certain decisions were made, how the structure benefits specific teams and stakeholders etc. Does something like that exist?  
+",4,2,johnsonfrusciante,2024-07-19 12:44:28,https://www.reddit.com/r/dataengineering/comments/1e72uc6/detailed_realworld_data_modeling_examples/,0,False,False,False,False
+1e71wi8,Running DBT with Airflow,"Hi All , after going through multiple posts on reddit on how to integrate DBT as part of your existing data pipeline , there are multiple techniques , however the one where DBT is being used using Astronomer Cosmos over Bigquery as a data platform is being less talked about. As part of an ongoing project , I encountered the same issue and was able to solve the same and documented the journey in order to help in case anyone case across the same set of challenges.
+
+Please have a read and feel free to encourage the same by clapping and comments to make this post known to a more wider group.
+",6,0,ps_kev_96,2024-07-19 11:55:32,https://towardsdev.com/from-idea-to-implementation-a-step-by-step-guide-to-starting-your-data-science-side-2701183b536e,0,False,False,False,False
+1e74k3j,7 Ways to Make Queries Faster,,4,0,glaredb_tal,2024-07-19 14:05:03,https://glaredb.com/blog/7-ways-to-make-queries-faster,0,False,False,False,False
+1e73o09,[GCP] Terraform module to stream Pub/Sub JSON to Cloud SQL,,6,0,wil19558,2024-07-19 13:24:26,https://www.dataroc.ca/blog/terraform-module-to-stream-pubsub-json-to-cloud-sql-on-gcp,1,False,False,False,False
+1e6s3jy,The Data-Related “Red Flags” All Organisations Should Be Aware Of (And How To Avoid Them),,4,3,teheditor,2024-07-19 01:43:29,https://smbtech.au/thought-leadership/the-data-related-red-flags-all-organisations-should-be-aware-of-and-how-to-avoid-them/,0,False,False,False,False
+1e7c8uh,Create something like my data clean room,"Hi to everyone,
+
+I'm pretty new to creating data infraestructure and i'm trying to design something like a data clean room for my company where we can share data with our partners while encrypting all personal identifiable information. The issue here is that i have several doubts on how to achieve this fairly for each part:  
+1. how can I ensure that the other's part data is trully encrypted? maybe asking them to encrypt it before sharing?  
+2. how can I prevent downloading but enable data manipulation with open source tecnologies? eg: postgres for storage and python / R for data analysis.   
+3. where can I read more about this kind of architecture? some documented project or example i can read?
+
+Thank's in advance.",3,0,juanmac93,2024-07-19 19:30:56,https://www.reddit.com/r/dataengineering/comments/1e7c8uh/create_something_like_my_data_clean_room/,0,False,False,False,False
+1e79ybs,Optimizing my Workflow with DuckDB: Seeking Advice,"A very intentional feature of DuckDB is [how it handles concurrency](https://duckdb.org/docs/connect/concurrency.html), which only allows one read/write connection, OR multiple read connections at the same time.  So with DuckDB, one cannot have a read/write and a read connection open at the same time.
+
+Personal preference, but when working with hosted Datawarehouses (redshift/postgres, etc), I keep the database open in a viewer while tweaking and running data models with DBT, or loading new data. This helps me iterate and develop fast, without having to keep closing the connection.
+
+That said, I love DuckDB, and I've been working on a flow to do some local data modeling.  Super simple:
+
+* Python to ingest raw data (api, etc) and store as parquet files. 
+* In a DuckDB database, create views to query the raw parquet files into tables.
+* Use DBT to model the data to produce additional blended views
+
+One advantage of this setup is that since the “raw” DuckDB tables are views querying the Parquet files, they update automatically as the Parquet files are updated. This fits nicely into my workflow, allowing me to view the DuckDB database while data is being updated.
+
+However modeling data with DBT requires editing the schema, which cannot be done while viewing the database.
+
+To work around this, I’ve been maintaining separate read and write copies of the DuckDB database file. I keep the read file open in the viewer while making schema changes on the write file, then overwrite the read file and reload in the viewer. While this works, I suspect there are drawbacks.
+
+I’d love to hear the community’s thoughts on this approach. Is there a more sensible way to achieve this with the tools I’m using? I know I can spin up Postgres database w/ Docker, but I’m keen on adapting my workflow to use DuckDB if I can.
+
+TLDR: I’m exploring DuckDB for local data modeling but its concurrency limits clash with my workflow.  I’m seeking advice on better solutions. Any suggestions?",3,1,blue-lighty,2024-07-19 17:53:52,https://www.reddit.com/r/dataengineering/comments/1e79ybs/optimizing_my_workflow_with_duckdb_seeking_advice/,0,False,False,False,False
+1e6x721,Stored Procedure vs Script in Github,"Hi everyone, 
+
+At my workplace we use MariaDB as a primary database. Currently there were existing stored procedure that do the transformation when data gets into the database. 
+
+However, I have concerns about the version controlling of the stored procedure. Therefore, the solution I came up with was to store these procedure on Github, and use AWS lambda to execute these procedure. 
+
+May I know is this a good idea? Are they any reasons or scenarios where Stored Procedure is preferred over using python to execute SQL statements?",3,1,yiternity,2024-07-19 06:38:07,https://www.reddit.com/r/dataengineering/comments/1e6x721/stored_procedure_vs_script_in_github/,0,False,False,False,False
+1e6r5no,Query Snowflake Iceberg tables with DuckDB & Spark to Save Costs,,1,0,Buremba,2024-07-19 00:55:35,https://buremba.com/blog/use-snowflake-and-duckdb-with-iceberg,0,False,False,False,False
+1e7dau7,CSVs processing with pyspark,"Hello guys, I was wondering what’s the most efficient way to load multiple CSVs listings data into pyspark and write them to a single output file. I thought about partition them by timestamp and area, and write them to parquet, but not sure if I might miss something. Thank you for your help!",2,2,EnvironmentalBed603,2024-07-19 20:16:09,https://www.reddit.com/r/dataengineering/comments/1e7dau7/csvs_processing_with_pyspark/,0,False,False,False,False
+1e7btod,Learning Java for Data Engineering ,"Hi everyone,
+
+I'm a data engineer looking to upskill myself in real-time and batch data processing. I'm particularly interested in mastering Apache Flink, Spark, and Kafka. However, I don't have a strong background in Java, which I have heard is a popular, stable, and mature language for developing applications that interact with these tools.
+
+Is it worth investing time in learning Java to master these tools?
+
+I'd appreciate honest insights from experienced data engineers who have navigated this path or used these tools in production systems. Thanks!",2,6,nifesimii,2024-07-19 19:12:57,https://www.reddit.com/r/dataengineering/comments/1e7btod/learning_java_for_data_engineering/,0,False,False,False,False
+1e7669k,dbt Analytics Engineering Certification Exam,"For anyone preparing for the dbt Analytics Engineering Certification Exam, [dataflakes.io](http://dataflakes.io) provides free practice exams that closely simulate the real exam, helping you to identify knowledge gaps and build confidence. Feel free to check it out - 180 questions across the different categories paired with a kickass exam engine for free. ",2,0,dataflakes,2024-07-19 15:15:00,https://www.reddit.com/r/dataengineering/comments/1e7669k/dbt_analytics_engineering_certification_exam/,0,False,False,False,False
+1e6ukam,Data engineers who deal with unstructured data I need your help!,"I'm building a new unstructured data engine, my cofounder and I call this ""Snowflake"" but for unstructured data. 
+
+**This tool is still very early, so I like to hear feedback from data friends.** Basically, it
+
+- can be pointed to S3 location where unstructured files like docs, images, videos etc are lived
+
+- has an SQL interface to query files in S3 location (see below)
+
+- In the UI, you can configure LLM agents that take various input types. For example, if you were to classify some metadata like is\_horror\_movie from videos, you can roughly do something like this
+
+`SELECT EXTRACT(<agent_id>, video) FROM videos;`
+
+- In the UI, you can configure a semantic search index. Together with conventional SQL search, you can do pretty interesting hybrid SQL search query: 
+
+`SELECT photo FROM photos WHERE photo LIKE 'golden gate bridge' AND date = '2023-11-13';`
+
+**For those who start to think about using Gen AI to deal with unstructured data, how are you planning to do it?**",2,6,No_Communication2618,2024-07-19 03:55:53,https://www.reddit.com/r/dataengineering/comments/1e6ukam/data_engineers_who_deal_with_unstructured_data_i/,0,False,False,False,False
+1e7dnkm,AWS Glue Unable to Fetch Data from Amazon RDS?,"Hi guys! I've been having some trouble networking Glue to a private RDS DB instance. I can't find any videos or blogs about this which is quite infuriating! Everything using glue works until I go to run a job i.e. crawler run and connection.
+
+**But, for some reason even if I change the DB instance to public it still doesn't work.** I was a headless chicken for a while before this, but I thought this might explain something and I want to know if you have any hints.
+
+**Here's the error I get: ""Error Category: CONNECTION\_ERROR; An error occurred while calling o103.getDynamicFrame. Communications link failure""**
+
+# RDS Specs
+
+Everything is default under the ""Easy Create"" settings for MySQL other than using the free trial instance, connecting an EC2 instance, and having password-only authentication.
+
+The security group has inbound rules referencing itself, the EC2 instance's security group, and the default security group. It also has outbound rules referencing itself and the S3 endpoint's managed prefix list.
+
+# Connection and Crawler
+
+I created a connection to the MySQL RDS instance. Selected MySQL as the data source and used the default security group and the RDS DB instance's security group. The subnet I chose is connected to the RDS instance and contains the S3 endpoint.
+
+For the crawler, I gave it an IAM role with the GlueService and RDS read-only policy. I've tried giving more RDS permissions to no avail. The table loads perfectly fine in the Glue Data Catalog.
+
+Here's my job script:
+
+        import sys
+        from awsglue.transforms import *
+        from awsglue.utils import getResolvedOptions
+        from pyspark.context import SparkContext
+        from awsglue.context import GlueContext
+        from awsglue.job import Job
+        
+        args = getResolvedOptions(sys.argv, ['JOB_NAME'])
+        sc = SparkContext()
+        glueContext = GlueContext(sc)
+        spark = glueContext.spark_session
+        job = Job(glueContext)
+        job.init(args['JOB_NAME'], args)
+        
+        # Script generated for node AWS Glue Data Catalog
+        rdsCon = glueContext.create_dynamic_frame.from_catalog(database=""airbnb_untransformed_listings"", table_name=""columbus_oh_listings_listings"", transformation_ctx=""rdsCon"")  # The error is on this line
+        
+        # Script generated for node Amazon S3
+        AmazonS3_node = glueContext.write_dynamic_frame.from_options(frame=rdsCon, connection_type=""s3"", format=""glueparquet"", connection_options={""path"": ""s3://<S3 Location>"", ""partitionKeys"": []}, format_options={""compression"": ""snappy""}, transformation_ctx=""AmazonS3_node"")
+        
+        job.commit()
+
+If you have any questions, please ask! I'm in kind of a bind right now and stuck on my project. Posting here is a better decision than putting the definition of insanity into practice, lol.
+
+I've documented the entire step-by-step process in my GitHub, but it's super long. If you are interested: https://github.com/Nishal3/airbnb-warehousing.
+
+Thanks in advance for your help!",2,0,RepresentativePen297,2024-07-19 20:31:21,https://www.reddit.com/r/dataengineering/comments/1e7dnkm/aws_glue_unable_to_fetch_data_from_amazon_rds/,1,False,False,False,False
+1e7djgn,What's the difference between 'Google Cloud Data Engineer Professional Certificate' on Coursera and 'Google Cloud Data Engineer Learning Path' on EDX?,"I noticed the two specializations 'Google Cloud Data Engineer Professional Certificate' (Coursera) and 'Google Cloud Data Engineer Learning Path' (EDX) seem to hold the same goal and topic. Yet the EDX version seems to hold more individual courses. 
+
+Are the 2 specializations actually identical, with EDX just splitting up some courses ? 
+
+I am asking this since I prefer using the EDX platform over Coursera, yet i only hear the Coursera version being recommended by Data Engineers online.",3,1,SteffooM,2024-07-19 20:26:33,https://www.reddit.com/r/dataengineering/comments/1e7djgn/whats_the_difference_between_google_cloud_data/,1,False,False,False,False
+1e79ger,Looking for study partner ,"Currently I'm pursuing my masters degree..! As I'm writing this post ,I need study partner to maintain discipline ,to stay motivated throughout my journey and to exchange idea to excel in Data engineering domain. so like minded peps feel free to dm me ..!",1,1,No_Initiative3642,2024-07-19 17:32:42,https://www.reddit.com/r/dataengineering/comments/1e79ger/looking_for_study_partner/,0,False,False,False,False
+1e6s33v,Data Contracts in Action: Testing,,1,0,Pitah7,2024-07-19 01:42:51,https://medium.com/@pflooky/data-contracts-in-action-testing-111631338657?sk=8cea6c4e08a48d7e123b07b3e6a27713,0,False,False,False,False
+1e7dsqh,Looking for advice: Full stack / Software VS Data Engineer ,"Hi,
+For context I already have a job as a Data Engineer, but I am more inclined to Full stack and have spent time learning it throughout college.
+
+I am confused what to do? Should I go for the Data Engineer role (safe) or go for Dev (risky cause mostly getting calls from startup’s, but yes huge learning)
+
+What does the future look like, will Data Engineering be a good field in coming times? Does it have more growth?",1,1,Night_01,2024-07-19 20:37:25,https://www.reddit.com/r/dataengineering/comments/1e7dsqh/looking_for_advice_full_stack_software_vs_data/,0,False,False,False,False
+1e78t8l,"Call and API, decode and the store in a SQL warehouse","Hi
+
+  
+Can someone outline the tech stack needed to carry out the following steps:
+
+  
+1. Call an API
+
+2. Decode the JSON file into a flat file
+
+3. Store that file in a table in a SQL warehouse
+
+  
+I want to use an Azure warehouse. Should I use ADF and then a python script to decode the JSON file? Do I need some sort of blob storage as a holding or can I just process the json file in memory? The data payload is not very large. 
+
+  
+Thanks!
+
+  
+",0,1,random_postings,2024-07-19 17:05:36,https://www.reddit.com/r/dataengineering/comments/1e78t8l/call_and_api_decode_and_the_store_in_a_sql/,0,False,False,False,False
+1e6vdob,No Bullshit BI,,0,1,sbalnojan,2024-07-19 04:42:51,https://www.thdpth.com/p/no-bullshit-bi,0,False,False,False,False

@@ -1,0 +1,36 @@
+[2024-07-19T20:57:45.905+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-19T20:57:45.930+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-07-19T20:57:45.076127+00:00 [queued]>
+[2024-07-19T20:57:45.936+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-07-19T20:57:45.076127+00:00 [queued]>
+[2024-07-19T20:57:45.937+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-07-19T20:57:45.946+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): reddit_extraction> on 2024-07-19 20:57:45.076127+00:00
+[2024-07-19T20:57:45.951+0000] {standard_task_runner.py:64} INFO - Started process 67 to run task
+[2024-07-19T20:57:45.954+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'etl_reddit_pipeline', 'reddit_extraction', 'manual__2024-07-19T20:57:45.076127+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/reddit_dag.py', '--cfg-path', '/tmp/tmpl3d032ev']
+[2024-07-19T20:57:45.955+0000] {standard_task_runner.py:91} INFO - Job 11: Subtask reddit_extraction
+[2024-07-19T20:57:45.991+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-07-19T20:57:45.076127+00:00 [running]> on host aa0946d1cd0d
+[2024-07-19T20:57:46.059+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='nopega' AIRFLOW_CTX_DAG_ID='etl_reddit_pipeline' AIRFLOW_CTX_TASK_ID='reddit_extraction' AIRFLOW_CTX_EXECUTION_DATE='2024-07-19T20:57:45.076127+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-19T20:57:45.076127+00:00'
+[2024-07-19T20:57:46.060+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-19T20:57:46.074+0000] {logging_mixin.py:188} INFO - connect to reddit!
+[2024-07-19T20:57:46.074+0000] {logging_mixin.py:188} INFO - <praw.models.listing.generator.ListingGenerator object at 0x7f0ed8194880>
+[2024-07-19T20:57:46.075+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-19T20:57:46.075+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/pipelines/reddit_pipeline.py", line 7, in reddit_pipeline
+    posts= extract_posts(instance, subreddit,time_filter,limit)
+  File "/opt/airflow/etls/reddit_etl.py", line 22, in extract_posts
+    for post in post:
+UnboundLocalError: local variable 'post' referenced before assignment
+[2024-07-19T20:57:46.087+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=etl_reddit_pipeline, task_id=reddit_extraction, run_id=manual__2024-07-19T20:57:45.076127+00:00, execution_date=20240719T205745, start_date=20240719T205745, end_date=20240719T205746
+[2024-07-19T20:57:46.094+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 11 for task reddit_extraction (local variable 'post' referenced before assignment; 67)
+[2024-07-19T20:57:46.126+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2024-07-19T20:57:46.139+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-19T20:57:46.141+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
